@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weariiii - Fashion E-commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <div class="search-header">
+                <h4>Search Products</h4>
+                <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="search-input-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for products, categories..." id="searchInput">
+            </div>
+            <div class="search-suggestions">
+                <h6>Popular Searches</h6>
+                <ul>
+                    <li><i class="fas fa-search"></i> Summer Dress</li>
+                    <li><i class="fas fa-search"></i> Casual Shirt</li>
+                    <li><i class="fas fa-search"></i> Blazer</li>
+                    <li><i class="fas fa-search"></i> Accessories</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <span class="brand-text">weariiii</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#new-arrivals">New Arrivals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="icon-link" id="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
+                    <a href="#" class="icon-link" aria-label="Account"><i class="fas fa-user"></i></a>
+                    <a href="#" class="icon-link cart-icon" aria-label="Cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">2</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <div class="hero-text">
+                        <span class="subtitle scroll-reveal">New Collection 2024</span>
+                        <h1 class="hero-title scroll-reveal">Freedom in Every Stitch. Presence in Every Moment.</h1>
+                        <p class="hero-description scroll-reveal">Discover our latest collection designed to give you the freedom to dress elegantly, anywhere, anytime. More than clothing, it's about presence.</p>
+                        <div class="hero-buttons scroll-reveal">
+                            <a href="#shop" class="btn btn-primary">Shop Now</a>
+                            <a href="#categories" class="btn btn-outline">Explore Collection</a>
+                        </div>
+                        <div class="hero-stats scroll-reveal">
+                            <div class="stat-item">
+                                <span class="stat-number">50K+</span>
+                                <span class="stat-label">Happy Customers</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">Products</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Countries</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-image-wrapper">
+                    <div class="hero-image scroll-reveal">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1000&fit=crop" alt="Fashion Model" loading="lazy">
+                        <div class="floating-card card-1">
+                            <i class="fas fa-leaf"></i>
+                            <span>Eco-Friendly</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-award"></i>
+                            <span>Premium Quality</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shape"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <div class="feature-item scroll-reveal">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Free Shipping</h4>
+                        <p>On orders over $100</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="feature-item scroll-reveal">
+                        <div class="feature-icon">
+                            <i class="fas fa-undo"></i>
+                        </div>
+                        <h4>Easy Returns</h4>
+                        <p>30-day return policy</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="feature-item scroll-reveal">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h4>Secure Payment</h4>
+                        <p>100% secure checkout</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="feature-item scroll-reveal">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p>Dedicated support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-subtitle">Browse by Category</span>
+                <h2 class="section-title">Shop by Category</h2>
+                <p class="section-description">Explore our wide range of categories and find your perfect style</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="category-card scroll-reveal">
+                        <div class="category-image">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=500&fit=crop" alt="Women's Fashion" loading="lazy">
+                            <div class="category-overlay">
+                                <h3>Women's Fashion</h3>
+                                <span class="item-count">120 Items</span>
+                                <a href="#" class="btn btn-sm">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card scroll-reveal">
+                        <div class="category-image">
+                            <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?w=600&h=500&fit=crop" alt="Men's Fashion" loading="lazy">
+                            <div class="category-overlay">
+                                <h3>Men's Fashion</h3>
+                                <span class="item-count">95 Items</span>
+                                <a href="#" class="btn btn-sm">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card scroll-reveal">
+                        <div class="category-image">
+                            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&h=500&fit=crop" alt="Accessories" loading="lazy">
+                            <div class="category-overlay">
+                                <h3>Accessories</h3>
+                                <span class="item-count">80 Items</span>
+                                <a href="#" class="btn btn-sm">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="products-section" id="shop">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-subtitle">Our Products</span>
+                <h2 class="section-title">Featured Collection</h2>
+                <p class="section-description">Handpicked items just for you</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-6 col-lg-3">
+                    <div class="product-card scroll-reveal">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop" alt="Elegant Green Dress" loading="lazy">
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-bag"></i></button>
+                            </div>
+                            <span class="badge badge-new">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-name">Elegant Green Dress</h5>
+                            <div class="product-price">
+                                <span class="current-price">$129.00</span>
+                                <span class="original-price">$159.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(4.5)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="product-card scroll-reveal">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=500&fit=crop" alt="Classic Blazer" loading="lazy">
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-bag"></i></button>
+                            </div>
+                            <span class="badge badge-sale">-20%</span>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-name">Classic Blazer</h5>
+                            <div class="product-price">
+                                <span class="current-price">$189.00</span>
+                                <span class="original-price">$239.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="product-card scroll-reveal">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=500&fit=crop" alt="Casual Shirt" loading="lazy">
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-bag"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-name">Casual Shirt</h5>
+                            <div class="product-price">
+                                <span class="current-price">$79.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(4.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="product-card scroll-reveal">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1551028919-ac76c9028d1b?w=400&h=500&fit=crop" alt="Summer Dress" loading="lazy">
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-bag"></i></button>
+                            </div>
+                            <span class="badge badge-new">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-name">Summer Dress</h5>
+                            <div class="product-price">
+                                <span class="current-price">$99.00</span>
+                                <span class="original-price">$129.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(4.5)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="product-card scroll-reveal">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=500&fit=crop" alt="Designer T-Shirt" loading="lazy">
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-bag"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-name">Designer T-Shirt</h5>
+                            <div class="product-price">
+                                <span class="current-price">$49.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="product-card scroll-reveal">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=500&fit=crop" alt="Denim Jacket" loading="lazy">
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-bag"></i></button>
+                            </div>
+                            <span class="badge badge-sale">-15%</span>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-name">Denim Jacket</h5>
+                            <div class="product-price">
+                                <span class="current-price">$149.00</span>
+                                <span class="original-price">$179.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(4.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="product-card scroll-reveal">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=500&fit=crop" alt="Linen Shirt" loading="lazy">
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-bag"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-name">Linen Shirt</h5>
+                            <div class="product-price">
+                                <span class="current-price">$89.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(4.5)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="product-card scroll-reveal">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=500&fit=crop" alt="Pleated Skirt" loading="lazy">
+                            <div class="product-actions">
+                                <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                                <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                                <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-bag"></i></button>
+                            </div>
+                            <span class="badge badge-new">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h5 class="product-name">Pleated Skirt</h5>
+                            <div class="product-price">
+                                <span class="current-price">$109.00</span>
+                                <span class="original-price">$139.00</span>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 scroll-reveal">
+                <a href="#" class="btn btn-primary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+        <div class="container">
+            <div class="banner-wrapper scroll-reveal">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="banner-content">
+                            <span class="banner-subtitle">Summer Sale</span>
+                            <h2 class="banner-title">Get Up to 50% Off</h2>
+                            <p class="banner-description">On selected items this summer. Limited time offer, don't miss out!</p>
+                            <a href="#" class="btn btn-light">Shop Sale</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="banner-image">
+                            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=700&h=500&fit=crop" alt="Summer Sale" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="new-arrivals-section" id="new-arrivals">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-subtitle">Just Arrived</span>
+                <h2 class="section-title">New Arrivals</h2>
+                <p class="section-description">Check out our latest additions to the collection</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="arrival-card scroll-reveal">
+                        <div class="arrival-image">
+                            <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&h=450&fit=crop" alt="Floral Maxi Dress" loading="lazy">
+                            <span class="arrival-badge">New</span>
+                        </div>
+                        <div class="arrival-info">
+                            <h5>Floral Maxi Dress</h5>
+                            <p class="arrival-price">$159.00</p>
+                            <a href="#" class="btn btn-sm">Quick View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="arrival-card scroll-reveal">
+                        <div class="arrival-image">
+                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=450&fit=crop" alt="Business Suit" loading="lazy">
+                            <span class="arrival-badge">New</span>
+                        </div>
+                        <div class="arrival-info">
+                            <h5>Business Suit</h5>
+                            <p class="arrival-price">$299.00</p>
+                            <a href="#" class="btn btn-sm">Quick View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="arrival-card scroll-reveal">
+                        <div class="arrival-image">
+                            <img src="https://images.unsplash.com/photo-1550614000-4b9519e02a48?w=600&h=450&fit=crop" alt="Casual Knitwear" loading="lazy">
+                            <span class="arrival-badge">New</span>
+                        </div>
+                        <div class="arrival-info">
+                            <h5>Casual Knitwear</h5>
+                            <p class="arrival-price">$89.00</p>
+                            <a href="#" class="btn btn-sm">Quick View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-subtitle">Testimonials</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card scroll-reveal">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The quality of the clothes is amazing! I've never felt more confident in my outfits. weariiii truly delivers on their promise of elegance and comfort."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Sarah Johnson" loading="lazy">
+                            <div class="author-info">
+                                <h6>Sarah Johnson</h6>
+                                <span>Fashion Blogger</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card scroll-reveal">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Fast shipping and excellent customer service. The clothes fit perfectly and the fabric quality is top-notch. Will definitely shop here again!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Michael Chen" loading="lazy">
+                            <div class="author-info">
+                                <h6>Michael Chen</h6>
+                                <span>Business Professional</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card scroll-reveal">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"I love how versatile the pieces are. I can wear them to work, casual outings, or even formal events. weariiii has become my go-to brand!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Emily Davis" loading="lazy">
+                            <div class="author-info">
+                                <h6>Emily Davis</h6>
+                                <span>Interior Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-wrapper scroll-reveal">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="newsletter-content">
+                            <h3>Subscribe to Our Newsletter</h3>
+                            <p>Get the latest updates on new products, sales, and exclusive offers directly to your inbox.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <form class="newsletter-form" onsubmit="event.preventDefault(); showNotification('Thank you for subscribing!');">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email address" required>
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-brand">weariiii</h4>
+                        <p class="footer-description">Freedom in Every Stitch. Presence in Every Moment. Discover fashion that adapts to your lifestyle.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h5>Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#shop">Shop</a></li>
+                            <li><a href="#categories">Categories</a></li>
+                            <li><a href="#new-arrivals">New Arrivals</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h5>Customer Service</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Shipping Info</a></li>
+                            <li><a href="#">Returns</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h5>Company</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h5>Contact</h5>
+                        <ul class="footer-contact">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Fashion St, NY</li>
+                            <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                            <li><i class="fas fa-envelope"></i> info@weariiii.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">&copy; 2024 weariiii. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
