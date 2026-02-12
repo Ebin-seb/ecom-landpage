@@ -481,22 +481,74 @@ document.addEventListener('DOMContentLoaded', function() {
 // Theme selection
 // -------------------------------------------
 
-const toggleTheme = () => {
-    const darkTheme = document.getElementById('dark-theme')
-    const isDark = !darkTheme.disabled
-
-    darkTheme.disabled = isDark
-    localStorage.setItem('theme', isDark ? 'light' : 'dark')
-  }
-
-  // Load saved theme
-  window.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('theme')
-    if (savedTheme === 'dark') {
-      document.getElementById('dark-theme').disabled = false
+function styleToggleSwitch(isDark) {
+    const sw = document.getElementById("themeSwitch");
+  
+    // base styling
+    sw.style.width = "52px";
+    sw.style.height = "26px";
+    sw.style.cursor = "pointer";
+    sw.style.border = "1px solid grey";
+    sw.style.borderRadius = "50px";
+    sw.style.backgroundRepeat = "no-repeat";
+    sw.style.backgroundPosition = "center";
+    sw.style.backgroundSize = "18px";
+    sw.style.transition = "background 0.3s ease";
+  
+    if (isDark) {
+      sw.style.backgroundColor = "#1e293b";
+      sw.style.border = "1px solid white";
+      sw.style.backgroundImage =
+        "url(\"data:image/svg+xml;utf8,\
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'>\
+        <path d='M21.64 13a1 1 0 0 0-1.05-.14A8 8 0 0 1 11.14 3.41a1 1 0 0 0-1.28-1.28A10 10 0 1 0 22.92 14a1 1 0 0 0-1.28-1z'/>\
+        </svg>\")";
+    } else {
+      sw.style.backgroundColor = "#e5e7eb";
+      sw.style.backgroundImage =
+        "url(\"data:image/svg+xml;utf8,\
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'>\
+        <circle cx='12' cy='12' r='5'/>\
+        <g stroke='black' stroke-width='2'>\
+          <line x1='12' y1='1' x2='12' y2='4'/>\
+          <line x1='12' y1='20' x2='12' y2='23'/>\
+          <line x1='1' y1='12' x2='4' y2='12'/>\
+          <line x1='20' y1='12' x2='23' y2='12'/>\
+        </g>\
+        </svg>\")";
     }
-  })
-
+  }
+  // ----------------------------------
+  // Toggle theme (your logic preserved)
+  // ----------------------------------
+  const toggleTheme = () => {
+    const darkTheme = document.getElementById("dark-theme");
+    const sw = document.getElementById("themeSwitch");
+  
+    const isDark = !darkTheme.disabled;
+  
+    darkTheme.disabled = isDark;
+    localStorage.setItem("theme", isDark ? "light" : "dark");
+  
+    styleToggleSwitch(!isDark);
+  };
+  
+  // ----------------------------------
+  // Sync on page load
+  // ----------------------------------
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    const darkTheme = document.getElementById("dark-theme");
+    const sw = document.getElementById("themeSwitch");
+  
+    const isDark = savedTheme === "dark";
+  
+    darkTheme.disabled = !isDark;
+    sw.checked = isDark;
+  
+    styleToggleSwitch(isDark);
+  });
+  
 // ========================================
 // Console Welcome Message
 // ========================================
