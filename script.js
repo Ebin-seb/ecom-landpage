@@ -477,6 +477,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
+// -------------------------------------------
+// Theme selection
+// -------------------------------------------
+
+const toggleTheme = () => {
+    const darkTheme = document.getElementById('dark-theme')
+    const isDark = !darkTheme.disabled
+
+    darkTheme.disabled = isDark
+    localStorage.setItem('theme', isDark ? 'light' : 'dark')
+  }
+
+  // Load saved theme
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme')
+    if (savedTheme === 'dark') {
+      document.getElementById('dark-theme').disabled = false
+    }
+  })
+
 // ========================================
 // Console Welcome Message
 // ========================================

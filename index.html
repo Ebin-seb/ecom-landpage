@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style-dark.css" id="dark-theme" disabled>
 </head>
 <body>
     <!-- Search Overlay -->
@@ -38,6 +39,7 @@
         <div class="container">
             <a class="navbar-brand" href="#home">
                 <span class="brand-text">weariiii</span>
+                <!-- <button onclick="toggleTheme()">Toggle Theme</button> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -50,14 +52,33 @@
                     <li class="nav-item"><a class="nav-link" href="#new-arrivals">New Arrivals</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 </ul>
-                <div class="nav-icons">
-                    <button class="icon-link" id="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
-                    <a href="#" class="icon-link" aria-label="Account"><i class="fas fa-user"></i></a>
+                <div class="nav-icons d-flex align-items-center gap-3">
+                    <button class="icon-link" id="searchBtn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                
+                    <!-- Theme Switch -->
+                    <div class="form-check form-switch mb-0">
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            role="switch"
+                            id="themeSwitch"
+                            onchange="toggleTheme()"
+                            aria-label="Toggle theme"
+                        >
+                    </div>
+                
+                    <a href="#" class="icon-link" aria-label="Account">
+                        <i class="fas fa-user"></i>
+                    </a>
+                
                     <a href="#" class="icon-link cart-icon" aria-label="Cart">
                         <i class="fas fa-shopping-bag"></i>
                         <span class="cart-count">2</span>
                     </a>
                 </div>
+                
             </div>
         </div>
     </nav>
